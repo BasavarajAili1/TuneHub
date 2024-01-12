@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+	</head>
+	<body>
+		<h1>Register to TuneHub Music Player!</h1>
+		
+		<div class="container">
+			<form action="register" method="post">
+				<label for="username">Enter your name : </label>
+				<input type="text"  name="username" id="username"/>
+				<br>
+				
+				<label for="email">Email : </label>
+				<input type="email" name="email" id="email"/>
+				<br>
+				
+				<label for="Password">Password : </label>
+				<input type="password" name="password" id="password"/>
+				<br>
+				
+				<label for="gender">Gender : </label>
+				<input type="radio" id="male" name="gender" value="male"/>
+				<label for="male">Male</label><br>
+				<input type="radio" id="female" name="gender" value="female"/>
+				<label for="female">Female</label><br>
+				<input type="radio" id="other" name="gender" value="other"/>
+				<label for="other">Other</label>
+				<br>
+				
+				<label for="role">Role : </label>
+				<input type="radio" id="admin" name="role" value="admin"/>
+				<label for="admin">Admin</label><br>
+				<input type="radio" id="customer" name="role" value="customer"/>
+				<label for="customer">Customer</label>
+				<br>
+				
+				<label for="address">Address : </label>
+				<textarea name="address"></textarea>
+				<br>
+				
+				<input type="submit"/>
+				
+			</form>
+		</div>
+	</body>
+	
+	
+</html>
