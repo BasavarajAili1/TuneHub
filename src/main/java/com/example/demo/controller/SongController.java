@@ -17,6 +17,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class SongController {
+	
+	public SongController(SongService service) {
+		super();
+		this.service = service;
+	}
+
 	@Autowired
 	SongService service;
 	@PostMapping("/addSong")

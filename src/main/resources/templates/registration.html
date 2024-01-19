@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Register</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" th:href="@{/css/registration.css}">
 	</head>
 	<body>
-		<h1>Register to TuneHub Music Player!</h1>
+        <div class="circle"></div>
 		
-		<div class="container">
-			<form action="register" method="post">
-				<label for="username">Enter your name : </label>
-				<input type="text"  name="username" id="username"/>
-				<br>
+		<div class="card">
+            <div class="logo">
+                <i class="bx bx-music bx-burst bx-rotate-90"></i>
+            </div>
+            <h2>Create Account</h2>
+
+			<form action="register" method="post" class="form">
+				<input type="text"  name="username" id="username" placeholder="Name" required/>
 				
-				<label for="email">Email : </label>
-				<input type="email" name="email" id="email"/>
-				<br>
+				<input type="email" name="email" id="email" placeholder="Email" required/>
 				
-				<label for="Password">Password : </label>
-				<input type="password" name="password" id="password"/>
-				<br>
+				<input type="password" name="password" id="password" placeholder="Password" required/>
 				
 				<label for="gender">Gender : </label>
-				<input type="radio" id="male" name="gender" value="male"/>
-				<label for="male">Male</label><br>
-				<input type="radio" id="female" name="gender" value="female"/>
-				<label for="female">Female</label><br>
-				<input type="radio" id="other" name="gender" value="other"/>
+				<input type="radio" id="male" name="gender" value="male" />
+				<label for="male">Male</label>
+				<input type="radio" id="female" name="gender" value="female" />
+				<label for="female">Female</label>
+				<input type="radio" id="other" name="gender" value="other" />
 				<label for="other">Other</label>
-				<br>
 				
 				<label for="role">Role : </label>
 				<input type="radio" id="admin" name="role" value="admin"/>
-				<label for="admin">Admin</label><br>
+				<label for="admin">Admin</label>
 				<input type="radio" id="customer" name="role" value="customer"/>
 				<label for="customer">Customer</label>
-				<br>
 				
-				<label for="address">Address : </label>
-				<textarea name="address"></textarea>
-				<br>
+				<textarea name="address" placeholder="Address"></textarea>
 				
-				<input type="submit"/>
+                <button type="submit">SIGN UP</button>
 				
 			</form>
 		</div>

@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Welcome to TuneHub - Home</title>
-		<link rel="stylesheet" th:href="@{/css/homestyle.css}">
-	</head>
-	<body>
-	 <header>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">TuneHub</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="login">Login</a></li>
-                <li><a href="registration">Register</a></li>
-             </ul>
-        </nav>
-    </header>
-    <br/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{/css/homestyle.css}" >
+    <title>Home | TuneHub</title>
+</head>
+<body>
+    
+    <div class="circle"></div>
+    <div class="card">
+        <div class="logo">
+            <i class="bx bx-music bx-burst bx-rotate-90"></i>
+        </div>
+        <h2>TuneHub says hi!</h2>
 
-		<div class="container">
-			<h1>TuneHub Says Hi!</h1>
-			<img alt="music" src="https://raw.githubusercontent.com/BasavarajAili1/tunehub_assets/main/music.jpg">
-			<a href="login" id="login">Login</a>
-			<a href="registration" id="reg">Register</a>
-		</div>
-	</body>
-	
-	
+        <div class="links">
+            <a href="login" id="login">LOGIN</a>
+            <a href="registration" id="reg">REGISTER</a>
+        </div>
+    </div>
+</body>
 </html>

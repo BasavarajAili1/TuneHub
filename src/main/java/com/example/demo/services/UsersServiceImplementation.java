@@ -9,9 +9,14 @@ import com.example.demo.repository.UsersRepository;
 
 @Service
 public class UsersServiceImplementation implements UsersService {
+	public UsersServiceImplementation(UsersRepository repo) {
+		super();
+		this.repo = repo;
+	}
+	
 	@Autowired
 	UsersRepository repo;
-	
+
 	@Override
 	public String addUser(Users user) {
 		repo.save(user);

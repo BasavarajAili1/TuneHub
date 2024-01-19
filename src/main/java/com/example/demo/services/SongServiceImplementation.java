@@ -12,6 +12,11 @@ import com.example.demo.repository.SongRepository;
 public class SongServiceImplementation implements SongService{
 	@Autowired
 	SongRepository repo;
+	public SongServiceImplementation(SongRepository repo) {
+		super();
+		this.repo = repo;
+	}
+
 	@Override
 	public void addSong(Song song) {
 		repo.save(song);

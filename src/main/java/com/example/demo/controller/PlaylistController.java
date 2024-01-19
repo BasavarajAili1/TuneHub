@@ -18,6 +18,12 @@ import com.example.demo.services.SongService;
 
 @Controller
 public class PlaylistController {
+	public PlaylistController(SongService songService, PlaylistService playlistService) {
+		super();
+		this.songService = songService;
+		this.playlistService = playlistService;
+	}
+
 	@Autowired
 	SongService songService;
 	@Autowired
