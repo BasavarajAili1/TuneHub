@@ -2,6 +2,8 @@ package com.example.demo.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,14 +14,15 @@ import jakarta.persistence.ManyToMany;
 public class Song {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	String name;
 	String artist;
 	String genre;
 	String link;
-	@ManyToMany
-	List<Playlist> playlist;
+	@ManyToMany(mappedBy = "songs")
+    @JsonBackReference  // Prevents infinite loop during serialization
+    List<Playlist> playlist;
 	public Song() {
 		super();
 	}

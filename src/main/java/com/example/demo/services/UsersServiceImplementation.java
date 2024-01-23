@@ -3,7 +3,9 @@ package com.example.demo.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.RegisterDto;
 import com.example.demo.entities.Users;
+import com.example.demo.mapper.RegisterMapper;
 import com.example.demo.repository.UsersRepository;
 
 
@@ -18,9 +20,10 @@ public class UsersServiceImplementation implements UsersService {
 	UsersRepository repo;
 
 	@Override
-	public String addUser(Users user) {
-		repo.save(user);
-		return "User added succussfully!";
+	public RegisterDto addUser(RegisterDto registerDto) {
+		Users user = RegisterMapper.mapToUsers(registerDto);
+		Users savedUser =  repo.save(user);
+		return RegisterMapper.mapToRegisterDto(savedUser);
 	}
 	
 	@Override
@@ -58,6 +61,12 @@ public class UsersServiceImplementation implements UsersService {
 	@Override
 	public void updateUser(Users user) {
 		repo.save(user);
+	}
+
+	@Override
+	public boolean isUserPremium(String email) {
+		Users user = repo.findByEmail(email);
+        return user != null && user.isPremium();
 	}
 
 }

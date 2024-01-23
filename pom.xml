@@ -56,6 +56,16 @@
    			<artifactId>mysql-connector-java</artifactId>
     		<version>8.0.28</version> <!-- Use the latest version available -->
 		</dependency>
+		<dependency>
+    		<groupId>com.fasterxml.jackson.core</groupId>
+   			<artifactId>jackson-databind</artifactId>
+    		 <!-- Use the version that matches your Spring Boot version -->
+		</dependency>
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+   			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

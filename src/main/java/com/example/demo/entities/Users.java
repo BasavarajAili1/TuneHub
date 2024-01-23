@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class Users {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	String username;
 	String email;
