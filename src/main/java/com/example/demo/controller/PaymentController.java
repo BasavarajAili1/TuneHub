@@ -30,7 +30,7 @@ public class PaymentController {
 
 	@GetMapping("/pay")
 	public String pay() {
-		
+		System.out.println("Call for payment");
 		return "pay";
 	}
 	

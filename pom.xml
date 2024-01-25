@@ -61,10 +61,6 @@
    			<artifactId>jackson-databind</artifactId>
     		 <!-- Use the version that matches your Spring Boot version -->
 		</dependency>
-		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-   			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
 
 	</dependencies>
 
